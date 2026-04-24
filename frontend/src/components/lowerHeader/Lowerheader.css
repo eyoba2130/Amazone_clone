@@ -1,0 +1,88 @@
+/* lowerHeader.css - Amazon-style lower navigation bar */
+
+.lower-header {
+  background-color: #f5f5f5;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0.4rem 1rem;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+.lower-header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+}
+
+/* Custom scrollbar for horizontal overflow */
+.lower-header ul::-webkit-scrollbar {
+  height: 4px;
+}
+
+.lower-header ul::-webkit-scrollbar-track {
+  background: #e7e7e7;
+  border-radius: 4px;
+}
+
+.lower-header ul::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+
+.lower-header li {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0f1111;
+  cursor: pointer;
+  padding: 0.2rem 0.2rem;
+  transition: all 0.2s ease;
+}
+
+/* First list item (All with menu icon) */
+.lower-header li:first-child {
+  font-weight: 700;
+  gap: 0.2rem;
+}
+
+.lower-header li:first-child span {
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lower-header li:hover {
+  color: #c45500;
+  border-bottom: 2px solid #c45500;
+  margin-bottom: -2px;
+}
+
+/* For active/hover state without shifting layout */
+.lower-header li {
+  border-bottom: 2px solid transparent;
+}
+
+/* Responsive: On smaller screens, allow wrapping or horizontal scroll */
+@media (max-width: 768px) {
+  .lower-header {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .lower-header ul {
+    gap: 0.8rem;
+  }
+
+  .lower-header li {
+    font-size: 0.75rem;
+  }
+}
+
+/* For very small screens, keep horizontal scroll (already enabled) */

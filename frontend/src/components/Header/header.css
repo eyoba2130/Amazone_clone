@@ -1,0 +1,206 @@
+/* header.css - Amazon-style header */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main header container (Amazon dark navbar) */
+.header {
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+/* Left section: logo + delivery */
+.logo-delivery {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-delivery a img {
+  width: 100px;
+  object-fit: contain;
+  margin-right: 0.25rem;
+}
+
+/* Location icon (reusing search icon as location pin) */
+.logo-delivery > span {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  margin-right: -0.3rem;
+}
+
+/* Delivery text block */
+.delivery {
+  color: white;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.delivery p {
+  color: #ccc;
+  font-weight: 400;
+  margin: 0;
+}
+
+.delivery span {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+/* Search form container */
+.input-form {
+  display: flex;
+  flex: 1;
+  max-width: 60rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Category dropdown (All) */
+.input-form select {
+  background-color: #e6e6e6;
+  padding: 0.6rem;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-right: 1px solid #cdcdcd;
+  font-weight: 500;
+}
+
+.input-form select:hover {
+  background-color: #d4d4d4;
+}
+
+/* Search input field */
+.input-form input {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+/* Right side container */
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: white;
+}
+
+.right-side > div,
+.right-side > a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  padding: 0.2rem 0.3rem;
+  cursor: pointer;
+}
+
+.right-side a:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+/* Language selector (flag + select) */
+.language {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.language img {
+  width: 22px;
+  height: 16px;
+}
+
+.language select {
+  background: transparent;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.language select option {
+  background-color: #131921;
+}
+
+/* Account & Lists / Returns & Orders */
+.right-side p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.right-side span {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* Cart link */
+.right-side a:last-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.right-side a:last-child span {
+  font-size: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .logo-delivery {
+    justify-content: space-between;
+  }
+
+  .input-form {
+    max-width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .right-side {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-side {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .delivery {
+    display: none; /* Hide delivery on very small screens */
+  }
+}
