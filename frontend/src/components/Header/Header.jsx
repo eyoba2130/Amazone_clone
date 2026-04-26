@@ -3,8 +3,6 @@ import { SlLocationPin } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
 import { FaCartPlus } from "react-icons/fa6";
 import LowerHeader from '../lowerHeader/lowerHeader';
-
-
 import './header.css'
 
 
@@ -21,13 +19,14 @@ export default function Header() {
                   <a href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiWYX7BBnpGeSuq5_Ccc32ttrBBcVY2valaw&s" alt="amazon logo" /></a>
                       {/* delivery location */}
                        
-                  <span> 
+                      <span> 
                           {/* icon   */}   
                              <SlLocationPin />
-                  </span>
+                       </span>
                    
                            
-                  <div className="delivery">
+                      <div className="delivery">
+                          
                           <p>Deliver to</p>   
                             <span>Ethiopia</span>
                       </div>

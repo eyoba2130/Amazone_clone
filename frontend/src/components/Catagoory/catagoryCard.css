@@ -1,0 +1,80 @@
+
+/* catagoryCard.css */
+
+.category-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 320px;
+  min-height: 380px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.category-card a {
+  text-decoration: none;
+  color: #0f1111;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.category-card h2 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.category-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.category-card p {
+  color: #007185;
+  font-size: 14px;
+  margin-top: auto;
+  font-weight: 500;
+}
+
+.category-card p:hover {
+  color: #c7511f;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .category-card {
+    max-width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .category-card h2 {
+    font-size: 18px;
+  }
+
+  .category-card img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-card img {
+    height: 180px;
+  }
+
+  .category-card h2 {
+    font-size: 16px;
+  }
+}

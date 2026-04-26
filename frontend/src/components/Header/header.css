@@ -1,4 +1,4 @@
-/* header.css - Amazon-style header */
+/* header.css */
 
 * {
   margin: 0;
@@ -6,132 +6,148 @@
   box-sizing: border-box;
 }
 
-/* Main header container (Amazon dark navbar) */
+section {
+  width: 100%;
+}
+
+/* ================= HEADER ================= */
+
 .header {
-  background-color: #131921;
+  background: #131921;
+  color: white;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
-  gap: 1rem;
-  flex-wrap: wrap;
-  font-family: 'Amazon Ember', Arial, sans-serif;
+  padding: 0 15px;
+  gap: 15px;
+  flex-wrap: nowrap;
 }
 
-/* Left section: logo + delivery */
+/* ================= LEFT SIDE ================= */
+
 .logo-delivery {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 12px;
 }
 
-.logo-delivery a img {
+.logo-delivery a {
+  padding: 6px;
+  border: 1px solid transparent;
+}
+
+.logo-delivery a:hover {
+  border: 1px solid white;
+}
+
+.logo-delivery img {
   width: 100px;
   object-fit: contain;
-  margin-right: 0.25rem;
 }
 
-/* Location icon (reusing search icon as location pin) */
-.logo-delivery > span {
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 1.2rem;
-  margin-right: -0.3rem;
+.logo-delivery span {
+  font-size: 20px;
 }
 
-/* Delivery text block */
 .delivery {
-  color: white;
-  font-size: 0.75rem;
-  line-height: 1.2;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 6px;
+  border: 1px solid transparent;
+}
+
+.delivery:hover {
+  border: 1px solid white;
 }
 
 .delivery p {
-  color: #ccc;
-  font-weight: 400;
-  margin: 0;
+  font-size: 12px;
+  color: #cccccc;
 }
 
 .delivery span {
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+/* ================= SEARCH ================= */
+
+.input-form {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: 0.2rem;
-}
-
-/* Search form container */
-.input-form {
-  display: flex;
-  flex: 1;
-  max-width: 60rem;
-  margin: 0 0.5rem;
-  border-radius: 0.5rem;
+  max-width: 850px;
+  height: 40px;
+  border-radius: 4px;
   overflow: hidden;
-  background-color: white;
 }
 
-/* Category dropdown (All) */
 .input-form select {
-  background-color: #e6e6e6;
-  padding: 0.6rem;
+  width: 60px;
+  height: 100%;
   border: none;
-  font-size: 0.8rem;
+  background: #e6e6e6;
+  padding-left: 8px;
   cursor: pointer;
-  border-right: 1px solid #cdcdcd;
-  font-weight: 500;
 }
 
-.input-form select:hover {
-  background-color: #d4d4d4;
-}
-
-/* Search input field */
 .input-form input {
   flex: 1;
-  padding: 0.6rem;
+  height: 100%;
   border: none;
-  font-size: 0.9rem;
+  padding: 0 10px;
+  font-size: 15px;
   outline: none;
 }
 
-/* Right side container */
-.right-side {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  color: white;
-}
-
-.right-side > div,
-.right-side > a {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: white;
-  font-size: 0.75rem;
-  line-height: 1.2;
-  padding: 0.2rem 0.3rem;
+.input-form button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  background: #febd69;
+  font-size: 24px;
   cursor: pointer;
 }
 
-.right-side a:hover {
-  border: 1px solid white;
-  border-radius: 2px;
+.input-form button:hover {
+  background: #f3a847;
 }
 
-/* Language selector (flag + select) */
+/* ================= RIGHT SIDE ================= */
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-side a,
+.language {
+  color: white;
+  text-decoration: none;
+  padding: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.right-side a:hover,
+.language:hover {
+  border: 1px solid white;
+}
+
 .language {
   display: flex;
-  flex-direction: row !important;
   align-items: center;
-  gap: 0.2rem;
+  gap: 5px;
 }
 
 .language img {
   width: 22px;
   height: 16px;
+  object-fit: cover;
 }
 
 .language select {
@@ -139,68 +155,55 @@
   color: white;
   border: none;
   font-weight: bold;
-  font-size: 0.8rem;
   cursor: pointer;
 }
 
-.language select option {
-  background-color: #131921;
-}
-
-/* Account & Lists / Returns & Orders */
 .right-side p {
-  margin: 0;
-  font-weight: 400;
+  font-size: 12px;
 }
 
 .right-side span {
-  font-weight: 700;
-  font-size: 0.85rem;
-}
-
-/* Cart link */
-.right-side a:last-child {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.3rem;
-  font-weight: 700;
-  font-size: 1rem;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .right-side a:last-child span {
-  font-size: 1.5rem;
+  font-size: 28px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: stretch;
-  }
+/* ================= RESPONSIVE ================= */
 
-  .logo-delivery {
-    justify-content: space-between;
+@media (max-width: 992px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
   }
 
   .input-form {
+    order: 3;
+    width: 100%;
     max-width: 100%;
-    margin: 0.5rem 0;
   }
 
   .right-side {
-    justify-content: space-evenly;
+    gap: 10px;
   }
 }
 
-@media (max-width: 480px) {
-  .right-side {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
+@media (max-width: 768px) {
+  .delivery,
+  .language,
+  .right-side a:nth-child(2),
+  .right-side a:nth-child(3) {
+    display: none;
   }
 
-  .delivery {
-    display: none; /* Hide delivery on very small screens */
+  .logo-delivery img {
+    width: 90px;
+  }
+
+  .input-form {
+    height: 38px;
   }
 }

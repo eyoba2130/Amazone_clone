@@ -1,0 +1,48 @@
+
+ /* category.css */
+
+.category {
+  position: relative;
+  margin-top: -250px; /* moves cards over banner like Amazon */
+  z-index: 10;
+  padding: 0 20px 30px;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* each card full width */
+.category-container .category-card {
+  width: 100%;
+}
+
+/* tablet */
+@media (max-width: 992px) {
+  .category {
+    margin-top: -150px;
+    padding: 0 15px 25px;
+  }
+
+  .category-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .category {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .category-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
