@@ -3,6 +3,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
 import { FaCartPlus } from "react-icons/fa6";
 import LowerHeader from '../lowerHeader/lowerHeader';
+import { Link } from 'react-router-dom';
 import './header.css'
 
 
@@ -16,7 +17,7 @@ export default function Header() {
               
                   {/* logo */}
                   
-                  <a href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiWYX7BBnpGeSuq5_Ccc32ttrBBcVY2valaw&s" alt="amazon logo" /></a>
+                  <Link to="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiWYX7BBnpGeSuq5_Ccc32ttrBBcVY2valaw&s" alt="amazon logo" /></Link>
                       {/* delivery location */}
                        
                       <span> 
@@ -53,22 +54,22 @@ export default function Header() {
                           </select>
                           
                       </div>
-                      <a href="#">
+                      <Link to="/signin">
                           <div>
                               <p>Hello, Sign in</p>
                                 <span>Account & Lists</span>
                               </div>
-                      </a>
+                      </Link>
                       {/* orderr */}
-                      <a href="#">
+                      <Link to="/orders">
                           <p>returns</p>
                             <span>& Orders</span>
-                      </a>
+                      </Link>
                       {/* cart */}
-                      <a to="cart">
+                      <Link to="/cart">
                          
                           <span> <FaCartPlus /></span>
-                      </a>
+                      </Link>
 
                   </div>
 
