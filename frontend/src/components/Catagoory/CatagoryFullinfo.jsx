@@ -11,12 +11,12 @@ export const categoryInfos = [
   },
   {
     title: 'mens clothing',
-    name: 'mens-clothing',
+    name: 'men\'s clothing',
     imgLink: 'https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_BOTTOMS_2x._SY232_CB624172947_.jpg' 
   },
   {
     title: 'womens clothing',
-    name: 'womens-clothing',
+    name: 'women\'s clothing',
     imgLink: 'https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_DRESSES_2x._SY232_CB623353881_.jpg'
   }
 ]

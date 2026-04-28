@@ -3,7 +3,7 @@ import CatagoryCard from './CatagoryCard';
 import { categoryInfos } from './catagoryFullinfo';
 import './category.css'
 
-function Catagory() {
+function Category() {
   return (
     <div className="category">
       <div className="category-container">
@@ -14,6 +14,5 @@ function Catagory() {
     </div>
   );
 }
-export default Catagory;
-
+export default Category
 

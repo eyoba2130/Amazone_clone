@@ -13,8 +13,8 @@ export default function Routing() {
     <Router>
         <Routes>
               <Route path="/" element={<Landing />} />
-              <Route path="/product/:id" element={<ProductDetail />} />
-              <Route path="/results" element={<Results />} />
+              <Route path="/product/:productId" element={<ProductDetail />} />
+              <Route path="/category/:categoryName" element={<Results />} />
               <Route path="/orders" element={<Orders />} />
               <Route path="/payment" element={<Payment />} />
               <Route path="/signin" element={<Signup />} />
