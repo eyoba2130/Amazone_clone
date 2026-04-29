@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { SlLocationPin } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
 import { FaCartPlus } from "react-icons/fa6";
 import LowerHeader from '../lowerHeader/lowerHeader';
 import { Link } from 'react-router-dom';
 import './header.css'
+import { DataContext } from '../DataProvider/DataProvider';
 
 
 
 export default function Header() {
+    const [state, dispatch] = useContext(DataContext)
+    console.log(state)
   return (
       <>
           <section>

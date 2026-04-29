@@ -1,16 +1,18 @@
-/* Results Page */
+/* Results.css */
+
 .results-page {
-  padding: 20px;
   background-color: #eaeded;
   min-height: 100vh;
+  padding: 20px;
 }
 
-/* Title */
+/* Heading */
 .results-page h1 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
-  margin-bottom: 5px;
   color: #111;
+  margin-bottom: 5px;
+  padding-left: 10px;
 }
 
 /* Category text */
@@ -18,27 +20,28 @@
   font-size: 16px;
   color: #565959;
   margin-bottom: 20px;
+  padding-left: 10px;
 }
 
-/* Product Grid */
+/* Products Grid */
 .products-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
+  padding: 10px;
 }
 
 /* Product Card */
 .products-container .product-card {
-  background: white;
+  background: #fff;
   border-radius: 8px;
   padding: 15px;
-  transition: 0.3s ease;
-  cursor: pointer;
   border: 1px solid #ddd;
+  transition: all 0.3s ease;
 }
 
 .products-container .product-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
   transform: translateY(-4px);
 }
 
@@ -53,6 +56,7 @@
 /* Product Title */
 .products-container .product-card h3 {
   font-size: 16px;
+  font-weight: 500;
   color: #0f1111;
   margin-bottom: 10px;
   height: 45px;
@@ -61,9 +65,15 @@
 
 /* Price */
 .products-container .product-card .price {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   color: #B12704;
+  margin-bottom: 10px;
+}
+
+/* Rating */
+.products-container .product-card .rating {
+  color: #ffa41c;
   margin-bottom: 10px;
 }
 
@@ -71,15 +81,23 @@
 .products-container .product-card button {
   width: 100%;
   padding: 10px;
-  border: none;
   background: #ffd814;
+  border: none;
   border-radius: 20px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .products-container .product-card button:hover {
   background: #f7ca00;
+}
+
+/* Loader Center */
+.products-container svg,
+.products-container .loader {
+  grid-column: 1 / -1;
+  margin: auto;
 }
 
 /* Responsive */
@@ -89,6 +107,6 @@
   }
 
   .results-page h1 {
-    font-size: 22px;
+    font-size: 24px;
   }
 }

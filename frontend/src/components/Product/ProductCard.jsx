@@ -1,39 +1,60 @@
-import React from 'react'
+
+
+
+import React, { useContext } from 'react';
 import Rating from '@mui/material/Rating';
 import CurrencyFormat from '../CurrencyFormant/CurrencyFormant';
-import './productCard.css'
-import { Link } from 'react-router';
+import './productCard.css';
+import { Link } from 'react-router-dom';
+import { DataContext } from '../DataProvider/DataProvider';
 
-function ProductCard({ product }) {
-    if (!product) {
-        return <div>Loading...</div>;
-    }
-   const { image,id, title, price, rating } = product; 
+function ProductCard({ product, flex ,renderDesc}) {
+  if (!product) {
+    return <div>Loading...</div>;
+  }
+
+  const { image, id, title, price, rating, discription } = product;
+  const [state, dispatch] = useContext(DataContext);
+  console.log(state)
+  const addToCart = () => {
+    dispatch(
+      {
+        type: Type.ADD_TO_BASKET,
+        item: {
+           image, id, title, price, rating, discription
+        }
+      }
+    )
+  }
+
   return (
-      <div className='product-card'>
-          <Link to={`/product/${id}`}>
-                <img src={image} alt={title} />
-          </Link>
-          <div>
-              <h3>
-                  {title}
-              </h3>  
-              <div>
-                  {/* rating */}
-                  <Rating value={rating.rate} precision={0.1}/>
-                  {/* count */}
-                  <small>{rating.count} </small>
+    <div className={`product-card ${flex ? 'product__flex' : ''}`}>
+      <Link to={`/product/${id}`}>
+        <img src={image} alt={title} />
+      </Link>
 
-              </div>
-          </div>
-          <div>
-              {/* price */}
-              <CurrencyFormat amount={price} />
-          </div>
-          <button>Add to Cart</button>
+      <div>
+        <h3>{title}</h3>
+        {renderDesc && <div>{ discription}</div>}
+
+        <div>
+          {/* rating */}
+          <Rating value={rating.rate} precision={0.1} readOnly />
+
+          {/* count */}
+          <small>{rating.count}</small>
+        </div>
       </div>
-      
-  )
+
+      <div>
+        {/* price */}
+        <CurrencyFormat amount={price} />
+      </div>
+
+      <button onClick={addToCart}>Add to Cart</button>
+
+    </div>
+  );
 }
 
-export default ProductCard
+export default ProductCard;

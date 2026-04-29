@@ -27,6 +27,8 @@ export default function ProductDetail() {
     <Layout>
       {loading ? (<Loader />) :
         (<ProductCard product={product}
+          flex={true}
+          renderDesc={true}
         />)}
       
       

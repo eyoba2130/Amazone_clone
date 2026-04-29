@@ -8,6 +8,7 @@
   border-radius: 8px;
   padding: 15px;
   width: 280px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,6 +92,31 @@
   max-width: 1500px;
   margin: auto;
 }
+/* Flex container for products */
+/* .product__flex{
+  display:flex;
+  
+  box-shadow: none;
+  gap:50px;
+  height: auto;
+}
+.product__flex h3{
+  padding: 20px 0;
+}
+.product__flex button{
+  display: block;
+  position: static;
+  width: 150px;
+  margin-right: 40px;
+}
+.product__flex{
+  height: 50vh;
+}
+.product-flex img{
+  height: auto;
+  width: 300px!important;
+} */
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -107,3 +133,4 @@
     padding: 10px;
   }
 }
+
