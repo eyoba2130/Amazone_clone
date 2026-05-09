@@ -26,7 +26,8 @@ function Product() {
                     <div className='product'>
                       
                         {product?.map((singleProduct) => (
-                           <ProductCard key={singleProduct.id} product={singleProduct} />
+                            <ProductCard key={singleProduct.id} product={singleProduct}
+                            renderAdd={true}/>
                 
             ))} 
                     </div>

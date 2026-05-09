@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Header from './components/Header/Header'
+// import Header from './components/Header/Header'
 import './App.css'
 import Routing from './components/Routing/Routing'
 function App() {

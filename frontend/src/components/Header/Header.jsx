@@ -1,19 +1,20 @@
 import React, { useContext } from 'react'
 import { SlLocationPin } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
-import { FaCartPlus } from "react-icons/fa6";
+import { BiCart } from "react-icons/bi";
+
 import LowerHeader from '../lowerHeader/lowerHeader';
 import { Link } from 'react-router-dom';
 import './header.css'
-import { DataContext } from '../DataProvider/DataProvider';
+import { useValue } from '../DataProvider/DataProvider';
 
 
 
 export default function Header() {
-    const [state, dispatch] = useContext(DataContext)
-    console.log(state)
+    const [state, dispatch] = useValue()
+    console.log(state.basket.length)
   return (
-      <>
+      <section className="fixed" >
           <section>
               <div className="header">
                   <div className="logo-delivery">
@@ -70,8 +71,8 @@ export default function Header() {
                       </Link>
                       {/* cart */}
                       <Link to="/cart">
-                         
-                          <span> <FaCartPlus /></span>
+                         <BiCart size={35} />
+                            <span className="cart-count">{state.basket.length}</span>
                       </Link>
 
                   </div>
@@ -85,7 +86,7 @@ export default function Header() {
           </section>
           <LowerHeader />
       
-      </>
+      </section>
   )
 }
 

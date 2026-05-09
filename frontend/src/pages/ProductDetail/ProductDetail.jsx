@@ -29,6 +29,7 @@ export default function ProductDetail() {
         (<ProductCard product={product}
           flex={true}
           renderDesc={true}
+          renderAdd={true}
         />)}
       
       

@@ -1,26 +1,14 @@
-// import { StrictMode } from 'react'
-// import { createRoot } from 'react-dom/client'
-// import './index.css'
-// import App from './App.jsx'
 
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
-
-import React, { createContext, useReducer } from 'react';
-
-export const DataContext = createContext();
-
-const DataProvider = ({ children, reducer, initialState }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  return (
-    <DataContext.Provider value={{ state, dispatch }}>
-      {children}
-    </DataContext.Provider>
-  );
-};
-
-export default DataProvider;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { DataProvider } from './components/DataProvider/DataProvider'; 
+import { Reducer, initialState } from './utility/Reducer';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <DataProvider reducer={Reducer} initialState={initialState}>
+      <App />
+    </DataProvider>
+  </React.StrictMode>
+);
